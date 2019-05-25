@@ -1,0 +1,1718 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5"
+         xmlns="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#"
+         xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+         xmlns:webp="http://webprotege.stanford.edu/">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5"/>
+
+<owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/R7JQFDgovebdB54lgZjyv90">
+  <rdfs:domain rdf:resource="http://webprotege.stanford.edu/ROnSHwlFohmLMXiUjRpVx3"/>
+  <rdfs:range rdf:resource="http://webprotege.stanford.edu/RBaJJyrmtR0GQyjVz6l4RkZ"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:label xml:lang="en">hasTheme</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/ROnSHwlFohmLMXiUjRpVx3">
+  <rdfs:label xml:lang="en">Song</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="http://webprotege.stanford.edu/RBaJJyrmtR0GQyjVz6l4RkZ">
+  <rdfs:label xml:lang="en">Theme</rdfs:label>
+</owl:Class>
+
+<owl:ObjectProperty rdf:about="#commonlyUsedIn">
+  <owl:inverseOf rdf:resource="#commonlyUsesInstrument"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">commonlyUsedIn</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#commonlyUsesInstrument">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">commonlyUsesInstrument</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasAuthor">
+  <rdfs:domain rdf:resource="http://webprotege.stanford.edu/ROnSHwlFohmLMXiUjRpVx3"/>
+  <rdfs:range rdf:resource="#MusicalGroup"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <owl:inverseOf rdf:resource="#wroteSong"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasAuthor</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#MusicalGroup">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MusicalGroup</rdfs:label>
+</owl:Class>
+
+<owl:ObjectProperty rdf:about="#wroteSong">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wroteSong</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasGenre">
+  <rdfs:range rdf:resource="#MusicalGenre"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasGenre</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#MusicalGenre">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MusicalGenre</rdfs:label>
+</owl:Class>
+
+<owl:ObjectProperty rdf:about="#hasSong">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasSong</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#usedIn">
+  <owl:inverseOf rdf:resource="#usesInstrument"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usedIn</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#usesInstrument">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usesInstrument</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RBjB2xyHhY7Uvv0bQFwAbAh">
+  <rdfs:domain rdf:resource="http://webprotege.stanford.edu/ROnSHwlFohmLMXiUjRpVx3"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:label xml:lang="en">releaseDate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RCJuncENyQVmOsabh0mrm2K">
+  <rdfs:domain rdf:resource="http://webprotege.stanford.edu/ROnSHwlFohmLMXiUjRpVx3"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  <rdfs:label xml:lang="en">tempo</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RCjx39phDHSPVrNN5Rjakgg">
+  <rdfs:domain rdf:resource="http://webprotege.stanford.edu/ROnSHwlFohmLMXiUjRpVx3"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  <rdfs:label xml:lang="en">duration</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Instrument">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instrument</rdfs:label>
+</owl:Class>
+
+<webp:RBaJJyrmtR0GQyjVz6l4RkZ rdf:about="http://webprotege.stanford.edu/R5gVJdGalG6CUSiHMwnlXd">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Heartbreak</rdfs:label>
+</webp:RBaJJyrmtR0GQyjVz6l4RkZ>
+
+<webp:RBaJJyrmtR0GQyjVz6l4RkZ rdf:about="http://webprotege.stanford.edu/R8yU6wPuqX5vCQp4og3yRgl">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Friendship</rdfs:label>
+</webp:RBaJJyrmtR0GQyjVz6l4RkZ>
+
+<webp:RBaJJyrmtR0GQyjVz6l4RkZ rdf:about="http://webprotege.stanford.edu/R9UOaAppggonJ7lP1UOMlvD">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">War</rdfs:label>
+</webp:RBaJJyrmtR0GQyjVz6l4RkZ>
+
+<webp:RBaJJyrmtR0GQyjVz6l4RkZ rdf:about="http://webprotege.stanford.edu/R9ae6N15jflpf1zcY64DX66">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Life</rdfs:label>
+</webp:RBaJJyrmtR0GQyjVz6l4RkZ>
+
+<webp:RBaJJyrmtR0GQyjVz6l4RkZ rdf:about="http://webprotege.stanford.edu/R9nTfSF9jYUfgyUf0h45Tia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Love</rdfs:label>
+</webp:RBaJJyrmtR0GQyjVz6l4RkZ>
+
+<webp:RBaJJyrmtR0GQyjVz6l4RkZ rdf:about="http://webprotege.stanford.edu/RB9OyTquabJOeFimxKdHuH2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Coming of Age</rdfs:label>
+</webp:RBaJJyrmtR0GQyjVz6l4RkZ>
+
+<webp:ROnSHwlFohmLMXiUjRpVx3 rdf:about="http://webprotege.stanford.edu/RBSTixUdw5hyZTdZmJ8hu5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasAuthor rdf:resource="#Weird_Al_Yankovich"/>
+  <hasGenre rdf:resource="#Comedy"/>
+  <usesInstrument rdf:resource="#AcousticGuitar"/>
+  <rdfs:label xml:lang="en">The_Saga_Begins</rdfs:label>
+</webp:ROnSHwlFohmLMXiUjRpVx3>
+
+<MusicalGroup rdf:about="#Weird_Al_Yankovich">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasGenre rdf:resource="#Comedy"/>
+  <hasGenre rdf:resource="#Pop"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weird_Al_Yankovich</rdfs:label>
+</MusicalGroup>
+
+<MusicalGenre rdf:about="#Comedy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#AcousticGuitar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AcousticGuitar</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Pop">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pop</rdfs:label>
+</MusicalGenre>
+
+<webp:RBaJJyrmtR0GQyjVz6l4RkZ rdf:about="http://webprotege.stanford.edu/RHTNq5FdK1rlajfoeSm6N2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Death</rdfs:label>
+</webp:RBaJJyrmtR0GQyjVz6l4RkZ>
+
+<webp:RBaJJyrmtR0GQyjVz6l4RkZ rdf:about="http://webprotege.stanford.edu/RuLLA5rnRlMy96IIocw3Ee">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Disillusionment</rdfs:label>
+</webp:RBaJJyrmtR0GQyjVz6l4RkZ>
+
+<Instrument rdf:about="#Accordion">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accordion</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#AcousticBassGuitar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AcousticBassGuitar</rdfs:label>
+</Instrument>
+
+<MusicalGroup rdf:about="#Acoustic_Rush">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acoustic_Rush</rdfs:label>
+</MusicalGroup>
+
+<Instrument rdf:about="#AeolianHarp">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AeolianHarp</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Afro">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Afro</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#Ajaeng">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ajaeng</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Alphorn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alphorn</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#AlpineBell">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AlpineBell</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#AltoClarinet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AltoClarinet</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#AltoFlute">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AltoFlute</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#AltoHorn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AltoHorn</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#AltoSarrusophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AltoSarrusophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#AltoSaxophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AltoSaxophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#AppalachianDulcimer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AppalachianDulcimer</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Archlute">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Archlute</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Avant-garde">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avant-garde</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#Banjo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banjo</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#BaritoneHorn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BaritoneHorn</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#BaritoneSarrusophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BaritoneSarrusophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#BaritoneSaxophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BaritoneSaxophone</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Baroque">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baroque</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#BaroqueWoodenFlute">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BaroqueWoodenFlute</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#BassClarinet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BassClarinet</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#BassDrum">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BassDrum</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#BassFlute">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BassFlute</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#BassGuitar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BassGuitar</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#BassSarrusophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BassSarrusophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#BassSaxophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BassSaxophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#BasseCor">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BasseCor</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#BassetClarinet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BassetClarinet</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#BassetHorn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BassetHorn</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Bassoon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bassoon</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Bazooka">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bazooka</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Bell">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bell</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Blues">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blues</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#Bombarde">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bombarde</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#BongoDrum">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BongoDrum</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#BrianBoruBagpipes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BrianBoruBagpipes</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Bullroarer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bullroarer</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#ButtonAccordian">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ButtonAccordian</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Caribbean">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caribbean</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#Castanets">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Castanets</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Cello">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cello</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Chimes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chimes</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#ChromaticAccordian">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ChromaticAccordian</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#CigarBoxGuitar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CigarBoxGuitar</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Cimbasso">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cimbasso</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#ClappedHands">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ClappedHands</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Clarinet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clarinet</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Classical">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classical</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#ClassicalGuitar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ClassicalGuitar</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Clavichord">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clavichord</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Concertina">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concertina</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Contemporary">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contemporary</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#ContrabassClarinet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ContrabassClarinet</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#ContrabassFlute">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ContrabassFlute</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#ContrabassOboe">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ContrabassOboe</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#ContrabassSarrusophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ContrabassSarrusophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#ContrabassSaxophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ContrabassSaxophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Contrabassoon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contrabassoon</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#CornishBagpipes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CornishBagpipes</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Country">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <commonlyUsesInstrument rdf:resource="#Accordion"/>
+  <commonlyUsesInstrument rdf:resource="#AcousticGuitar"/>
+  <commonlyUsesInstrument rdf:resource="#Banjo"/>
+  <commonlyUsesInstrument rdf:resource="#BassDrum"/>
+  <commonlyUsesInstrument rdf:resource="#BassGuitar"/>
+  <commonlyUsesInstrument rdf:resource="#DoubleBass"/>
+  <commonlyUsesInstrument rdf:resource="#Violin"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Country</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#DoubleBass">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DoubleBass</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Violin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Violin</rdfs:label>
+</Instrument>
+
+<webp:ROnSHwlFohmLMXiUjRpVx3 rdf:about="#Country_Fiddle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasAuthor rdf:resource="#Acoustic_Rush"/>
+  <usesInstrument rdf:resource="#AcousticGuitar"/>
+  <usesInstrument rdf:resource="#DoubleBass"/>
+  <usesInstrument rdf:resource="#Violin"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Country_Fiddle</rdfs:label>
+</webp:ROnSHwlFohmLMXiUjRpVx3>
+
+<Instrument rdf:about="#Cowbell">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cowbell</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#CroatianBagpipes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CroatianBagpipes</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Cromorne">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cromorne</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Crumhorn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crumhorn</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#DoubleContrabassFlute">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DoubleContrabassFlute</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#DrumMachine">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DrumMachine</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#DubreqStylophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DubreqStylophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#DuctFlute">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DuctFlute</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Early_Music">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Early_Music</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#ElectricGuitar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ElectricGuitar</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#ElectricOrgan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ElectricOrgan</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#ElectricPiano">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ElectricPiano</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Electronic">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronic</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#Euphonium">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euphonium</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Fiddle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiddle</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#FingerCymbals">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FingerCymbals</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#FingerboardSynthesizer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FingerboardSynthesizer</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Flageolets">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flageolets</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Flugelhorn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flugelhorn</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Flute">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flute</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Folgerphone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Folgerphone</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Folk">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Folk</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#FrenchHorn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FrenchHorn</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#GlassMarimba">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GlassMarimba</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Glockenspiel">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glockenspiel</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Gong">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gong</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#GreatHighlandBagpipe">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GreatHighlandBagpipe</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#GreatIrishWarpipes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GreatIrishWarpipes</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Guitar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guitar</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Guitar12Strings">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guitar12Strings</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#HammeredDulcimer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HammeredDulcimer</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Handbells">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Handbells</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#HardangerFiddle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HardangerFiddle</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Harp">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harp</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#HarpGuitar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HarpGuitar</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Harpsichord">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harpsichord</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Heckelphone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heckelphone</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Hip_Hop">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hip_Hop</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#HookedHarp">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HookedHarp</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Horn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horn</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#HuntingHorn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HuntingHorn</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#HurdyGurdy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HurdyGurdy</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#IrishBouzouki">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IrishBouzouki</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Jazz">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jazz</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#Jug">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jug</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#KeyedBugle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KeyedBugle</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#KeyedTrumpet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KeyedTrumpet</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Latin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latin</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#Lirone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lirone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Lute">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lute</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Lyre">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyre</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Mandolin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandolin</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Maraca">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maraca</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Marimba">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marimba</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Marinbaphone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marinbaphone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Mellophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mellophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Melodeon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melodeon</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Melodica">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melodica</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#MusicalBow">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MusicalBow</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#NaturalTrumpet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NaturalTrumpet</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#NorthumbrianSmallpipes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NorthumbrianSmallpipes</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#NoseFlute">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NoseFlute</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Oboe">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oboe</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#OboeDaCaccia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OboeDaCaccia</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Ocarina">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ocarina</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#OctaveMandolin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OctaveMandolin</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Octavin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Octavin</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#OctocontrabassClarinet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OctocontrabassClarinet</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Ophicleide">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ophicleide</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#OrganPipe">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OrganPipe</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#OvertoneGuitar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OvertoneGuitar</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#PanPipes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PanPipes</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#PastoralPipes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PastoralPipes</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Piano">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piano</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Piccolo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piccolo</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#PiccoloClarinet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PiccoloClarinet</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#PiccoloHeckelphone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PiccoloHeckelphone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#PiccoloOboe">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PiccoloOboe</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#PipeOrgan">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PipeOrgan</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Racket">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Racket</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Rainstick">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rainstick</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Ratchet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ratchet</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Rattle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rattle</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#ReedContrabass">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ReedContrabass</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#ReedPipe">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ReedPipe</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Renaissance">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renaissance</rdfs:label>
+</MusicalGenre>
+
+<MusicalGenre rdf:about="#Rock">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rock</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#RomanTuba">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RomanTuba</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#Romantic">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Romantic</rdfs:label>
+</MusicalGenre>
+
+<Instrument rdf:about="#Sampler">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sampler</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Sarrusophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarrusophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Saxhorn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saxhorn</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Saxonette">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saxonette</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Saxophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saxophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#ScottishSmallpipes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ScottishSmallpipes</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Serpent">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Serpent</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Siren">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siren</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#SleighBells">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SleighBells</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#SlideGuitar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SlideGuitar</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#SlideWhistle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SlideWhistle</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#SlitDrum">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SlitDrum</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#SnareDrum">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SnareDrum</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#SopraninoClarinet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SopraninoClarinet</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#SopraninoSaxophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SopraninoSaxophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#SopranoClarinet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SopranoClarinet</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#SopranoMandolin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SopranoMandolin</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#SopranoSaxophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SopranoSaxophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Sousaphone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sousaphone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Spoons">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spoons</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#SteelDrum">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SteelDrum</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#SteelGuitar">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SteelGuitar</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#SubcontrabassFlute">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SubcontrabassFlute</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#SubcontrabassSaxophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SubcontrabassSaxophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Synclavier">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synclavier</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Synthesizer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synthesizer</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#TalkingDrum">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TalkingDrum</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Tambourine">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tambourine</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#TenorHorn">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TenorHorn</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#TenorSarrusophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TenorSarrusophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#TenorSaxophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TenorSaxophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#TinWhistle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TinWhistle</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Triangle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Triangle</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Trombone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trombone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Trumpet">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trumpet</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#TrumpetBb">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TrumpetBb</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Tuba">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tuba</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#TubularBells">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TubularBells</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Turntables">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turntables</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#VerticalFlute">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VerticalFlute</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#VerticalViola">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VerticalViola</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Viola">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viola</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#ViolaDaGamba">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ViolaDaGamba</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#ViolaOrganista">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ViolaOrganista</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Violotta">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Violotta</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#VladimirskyRozhok">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VladimirskyRozhok</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#WagnerTuba">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WagnerTuba</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Washboard">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Washboard</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#WashtubBass">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WashtubBass</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#WelshPipes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WelshPipes</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Whip">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Whip</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Whistle">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Whistle</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#WillowFlute">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WillowFlute</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#WindChimes">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WindChimes</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Xylophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xylophone</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Zither">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zither</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#conch">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conch</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#soprillo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soprillo</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#Contrabass√°Anche">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contrabass√°Anche</rdfs:label>
+</Instrument>
+
+<Instrument rdf:about="#H√©licon">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H√©licon</rdfs:label>
+</Instrument>
+
+<MusicalGenre rdf:about="#R&amp;B_and_Soul">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R&amp;B_and_Soul</rdfs:label>
+</MusicalGenre>
+
+<swrl:Variable rdf:about="urn:swrl:var#s"/>
+
+<swrl:Variable rdf:about="urn:swrl:var#i"/>
+
+<swrl:Variable rdf:about="urn:swrl:var#j"/>
+
+<swrl:Variable rdf:about="urn:swrl:var#k"/>
+
+<swrl:Variable rdf:about="urn:swrl:var#g"/>
+
+<swrl:Variable rdf:about="urn:swrl:var#a"/>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://webprotege.stanford.edu/ROnSHwlFohmLMXiUjRpVx3"/>
+          <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#hasGenre"/>
+              <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+              <swrl:argument2 rdf:resource="urn:swrl:var#g"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#hasSong"/>
+          <swrl:argument1 rdf:resource="urn:swrl:var#g"/>
+          <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://webprotege.stanford.edu/ROnSHwlFohmLMXiUjRpVx3"/>
+          <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#hasGenre"/>
+              <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+              <swrl:argument2 rdf:resource="urn:swrl:var#g"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasAuthor"/>
+                  <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                  <swrl:argument2 rdf:resource="urn:swrl:var#a"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#hasGenre"/>
+          <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+          <swrl:argument2 rdf:resource="urn:swrl:var#g"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="http://webprotege.stanford.edu/ROnSHwlFohmLMXiUjRpVx3"/>
+          <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <swrl:AtomList>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#usesInstrument"/>
+              <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+              <swrl:argument2 rdf:resource="urn:swrl:var#i"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <swrl:AtomList>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#usesInstrument"/>
+                  <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                  <swrl:argument2 rdf:resource="urn:swrl:var#j"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <swrl:AtomList>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="#usesInstrument"/>
+                      <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                      <swrl:argument2 rdf:resource="urn:swrl:var#k"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <swrl:AtomList>
+                      <rdf:first>
+                        <swrl:DifferentIndividualsAtom>
+                          <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                          <swrl:argument2 rdf:resource="urn:swrl:var#j"/>
+                        </swrl:DifferentIndividualsAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <swrl:AtomList>
+                          <rdf:first>
+                            <swrl:DifferentIndividualsAtom>
+                              <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                              <swrl:argument2 rdf:resource="urn:swrl:var#k"/>
+                            </swrl:DifferentIndividualsAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <swrl:AtomList>
+                              <rdf:first>
+                                <swrl:DifferentIndividualsAtom>
+                                  <swrl:argument1 rdf:resource="urn:swrl:var#j"/>
+                                  <swrl:argument2 rdf:resource="urn:swrl:var#k"/>
+                                </swrl:DifferentIndividualsAtom>
+                              </rdf:first>
+                              <rdf:rest>
+                                <swrl:AtomList>
+                                  <rdf:first>
+                                    <swrl:ClassAtom>
+                                      <swrl:classPredicate rdf:resource="#MusicalGenre"/>
+                                      <swrl:argument1 rdf:resource="urn:swrl:var#g"/>
+                                    </swrl:ClassAtom>
+                                  </rdf:first>
+                                  <rdf:rest>
+                                    <swrl:AtomList>
+                                      <rdf:first>
+                                        <swrl:IndividualPropertyAtom>
+                                          <swrl:propertyPredicate rdf:resource="#commonlyUsesInstrument"/>
+                                          <swrl:argument1 rdf:resource="urn:swrl:var#g"/>
+                                          <swrl:argument2 rdf:resource="urn:swrl:var#i"/>
+                                        </swrl:IndividualPropertyAtom>
+                                      </rdf:first>
+                                      <rdf:rest>
+                                        <swrl:AtomList>
+                                          <rdf:first>
+                                            <swrl:IndividualPropertyAtom>
+                                              <swrl:propertyPredicate rdf:resource="#commonlyUsesInstrument"/>
+                                              <swrl:argument1 rdf:resource="urn:swrl:var#g"/>
+                                              <swrl:argument2 rdf:resource="urn:swrl:var#j"/>
+                                            </swrl:IndividualPropertyAtom>
+                                          </rdf:first>
+                                          <rdf:rest>
+                                            <swrl:AtomList>
+                                              <rdf:first>
+                                                <swrl:IndividualPropertyAtom>
+                                                  <swrl:propertyPredicate rdf:resource="#commonlyUsesInstrument"/>
+                                                  <swrl:argument1 rdf:resource="urn:swrl:var#g"/>
+                                                  <swrl:argument2 rdf:resource="urn:swrl:var#k"/>
+                                                </swrl:IndividualPropertyAtom>
+                                              </rdf:first>
+                                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </swrl:AtomList>
+                                          </rdf:rest>
+                                        </swrl:AtomList>
+                                      </rdf:rest>
+                                    </swrl:AtomList>
+                                  </rdf:rest>
+                                </swrl:AtomList>
+                              </rdf:rest>
+                            </swrl:AtomList>
+                          </rdf:rest>
+                        </swrl:AtomList>
+                      </rdf:rest>
+                    </swrl:AtomList>
+                  </rdf:rest>
+                </swrl:AtomList>
+              </rdf:rest>
+            </swrl:AtomList>
+          </rdf:rest>
+        </swrl:AtomList>
+      </rdf:rest>
+    </swrl:AtomList>
+  </swrl:body>
+  <swrl:head>
+    <swrl:AtomList>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#hasGenre"/>
+          <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+          <swrl:argument2 rdf:resource="urn:swrl:var#g"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </swrl:AtomList>
+  </swrl:head>
+</swrl:Imp>
+
+<owl:AllDifferent>
+  <owl:distinctMembers rdf:parseType="Collection">
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/R5gVJdGalG6CUSiHMwnlXd"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/R8yU6wPuqX5vCQp4og3yRgl"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/R9UOaAppggonJ7lP1UOMlvD"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/R9ae6N15jflpf1zcY64DX66"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/R9nTfSF9jYUfgyUf0h45Tia"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/RB9OyTquabJOeFimxKdHuH2"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/RBSTixUdw5hyZTdZmJ8hu5"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/RHTNq5FdK1rlajfoeSm6N2"/>
+    <rdf:Description rdf:about="http://webprotege.stanford.edu/RuLLA5rnRlMy96IIocw3Ee"/>
+    <rdf:Description rdf:about="#Accordion"/>
+    <rdf:Description rdf:about="#AcousticBassGuitar"/>
+    <rdf:Description rdf:about="#AcousticGuitar"/>
+    <rdf:Description rdf:about="#Acoustic_Rush"/>
+    <rdf:Description rdf:about="#AeolianHarp"/>
+    <rdf:Description rdf:about="#Afro"/>
+    <rdf:Description rdf:about="#Ajaeng"/>
+    <rdf:Description rdf:about="#Alphorn"/>
+    <rdf:Description rdf:about="#AlpineBell"/>
+    <rdf:Description rdf:about="#AltoClarinet"/>
+    <rdf:Description rdf:about="#AltoFlute"/>
+    <rdf:Description rdf:about="#AltoHorn"/>
+    <rdf:Description rdf:about="#AltoSarrusophone"/>
+    <rdf:Description rdf:about="#AltoSaxophone"/>
+    <rdf:Description rdf:about="#AppalachianDulcimer"/>
+    <rdf:Description rdf:about="#Archlute"/>
+    <rdf:Description rdf:about="#Avant-garde"/>
+    <rdf:Description rdf:about="#Banjo"/>
+    <rdf:Description rdf:about="#BaritoneHorn"/>
+    <rdf:Description rdf:about="#BaritoneSarrusophone"/>
+    <rdf:Description rdf:about="#BaritoneSaxophone"/>
+    <rdf:Description rdf:about="#Baroque"/>
+    <rdf:Description rdf:about="#BaroqueWoodenFlute"/>
+    <rdf:Description rdf:about="#BassClarinet"/>
+    <rdf:Description rdf:about="#BassDrum"/>
+    <rdf:Description rdf:about="#BassFlute"/>
+    <rdf:Description rdf:about="#BassGuitar"/>
+    <rdf:Description rdf:about="#BassSarrusophone"/>
+    <rdf:Description rdf:about="#BassSaxophone"/>
+    <rdf:Description rdf:about="#BasseCor"/>
+    <rdf:Description rdf:about="#BassetClarinet"/>
+    <rdf:Description rdf:about="#BassetHorn"/>
+    <rdf:Description rdf:about="#Bassoon"/>
+    <rdf:Description rdf:about="#Bazooka"/>
+    <rdf:Description rdf:about="#Bell"/>
+    <rdf:Description rdf:about="#Blues"/>
+    <rdf:Description rdf:about="#Bombarde"/>
+    <rdf:Description rdf:about="#BongoDrum"/>
+    <rdf:Description rdf:about="#BrianBoruBagpipes"/>
+    <rdf:Description rdf:about="#Bullroarer"/>
+    <rdf:Description rdf:about="#ButtonAccordian"/>
+    <rdf:Description rdf:about="#Caribbean"/>
+    <rdf:Description rdf:about="#Castanets"/>
+    <rdf:Description rdf:about="#Cello"/>
+    <rdf:Description rdf:about="#Chimes"/>
+    <rdf:Description rdf:about="#ChromaticAccordian"/>
+    <rdf:Description rdf:about="#CigarBoxGuitar"/>
+    <rdf:Description rdf:about="#Cimbasso"/>
+    <rdf:Description rdf:about="#ClappedHands"/>
+    <rdf:Description rdf:about="#Clarinet"/>
+    <rdf:Description rdf:about="#Classical"/>
+    <rdf:Description rdf:about="#ClassicalGuitar"/>
+    <rdf:Description rdf:about="#Clavichord"/>
+    <rdf:Description rdf:about="#Comedy"/>
+    <rdf:Description rdf:about="#Concertina"/>
+    <rdf:Description rdf:about="#Contemporary"/>
+    <rdf:Description rdf:about="#ContrabassClarinet"/>
+    <rdf:Description rdf:about="#ContrabassFlute"/>
+    <rdf:Description rdf:about="#ContrabassOboe"/>
+    <rdf:Description rdf:about="#ContrabassSarrusophone"/>
+    <rdf:Description rdf:about="#ContrabassSaxophone"/>
+    <rdf:Description rdf:about="#Contrabassoon"/>
+    <rdf:Description rdf:about="#CornishBagpipes"/>
+    <rdf:Description rdf:about="#Country"/>
+    <rdf:Description rdf:about="#Country_Fiddle"/>
+    <rdf:Description rdf:about="#Cowbell"/>
+    <rdf:Description rdf:about="#CroatianBagpipes"/>
+    <rdf:Description rdf:about="#Cromorne"/>
+    <rdf:Description rdf:about="#Crumhorn"/>
+    <rdf:Description rdf:about="#DoubleBass"/>
+    <rdf:Description rdf:about="#DoubleContrabassFlute"/>
+    <rdf:Description rdf:about="#DrumMachine"/>
+    <rdf:Description rdf:about="#DubreqStylophone"/>
+    <rdf:Description rdf:about="#DuctFlute"/>
+    <rdf:Description rdf:about="#Early_Music"/>
+    <rdf:Description rdf:about="#ElectricGuitar"/>
+    <rdf:Description rdf:about="#ElectricOrgan"/>
+    <rdf:Description rdf:about="#ElectricPiano"/>
+    <rdf:Description rdf:about="#Electronic"/>
+    <rdf:Description rdf:about="#Euphonium"/>
+    <rdf:Description rdf:about="#Fiddle"/>
+    <rdf:Description rdf:about="#FingerCymbals"/>
+    <rdf:Description rdf:about="#FingerboardSynthesizer"/>
+    <rdf:Description rdf:about="#Flageolets"/>
+    <rdf:Description rdf:about="#Flugelhorn"/>
+    <rdf:Description rdf:about="#Flute"/>
+    <rdf:Description rdf:about="#Folgerphone"/>
+    <rdf:Description rdf:about="#Folk"/>
+    <rdf:Description rdf:about="#FrenchHorn"/>
+    <rdf:Description rdf:about="#GlassMarimba"/>
+    <rdf:Description rdf:about="#Glockenspiel"/>
+    <rdf:Description rdf:about="#Gong"/>
+    <rdf:Description rdf:about="#GreatHighlandBagpipe"/>
+    <rdf:Description rdf:about="#GreatIrishWarpipes"/>
+    <rdf:Description rdf:about="#Guitar"/>
+    <rdf:Description rdf:about="#Guitar12Strings"/>
+    <rdf:Description rdf:about="#HammeredDulcimer"/>
+    <rdf:Description rdf:about="#Handbells"/>
+    <rdf:Description rdf:about="#HardangerFiddle"/>
+    <rdf:Description rdf:about="#Harp"/>
+    <rdf:Description rdf:about="#HarpGuitar"/>
+    <rdf:Description rdf:about="#Harpsichord"/>
+    <rdf:Description rdf:about="#Heckelphone"/>
+    <rdf:Description rdf:about="#Hip_Hop"/>
+    <rdf:Description rdf:about="#HookedHarp"/>
+    <rdf:Description rdf:about="#Horn"/>
+    <rdf:Description rdf:about="#HuntingHorn"/>
+    <rdf:Description rdf:about="#HurdyGurdy"/>
+    <rdf:Description rdf:about="#IrishBouzouki"/>
+    <rdf:Description rdf:about="#Jazz"/>
+    <rdf:Description rdf:about="#Jug"/>
+    <rdf:Description rdf:about="#KeyedBugle"/>
+    <rdf:Description rdf:about="#KeyedTrumpet"/>
+    <rdf:Description rdf:about="#Latin"/>
+    <rdf:Description rdf:about="#Lirone"/>
+    <rdf:Description rdf:about="#Lute"/>
+    <rdf:Description rdf:about="#Lyre"/>
+    <rdf:Description rdf:about="#Mandolin"/>
+    <rdf:Description rdf:about="#Maraca"/>
+    <rdf:Description rdf:about="#Marimba"/>
+    <rdf:Description rdf:about="#Marinbaphone"/>
+    <rdf:Description rdf:about="#Mellophone"/>
+    <rdf:Description rdf:about="#Melodeon"/>
+    <rdf:Description rdf:about="#Melodica"/>
+    <rdf:Description rdf:about="#MusicalBow"/>
+    <rdf:Description rdf:about="#NaturalTrumpet"/>
+    <rdf:Description rdf:about="#NorthumbrianSmallpipes"/>
+    <rdf:Description rdf:about="#NoseFlute"/>
+    <rdf:Description rdf:about="#Oboe"/>
+    <rdf:Description rdf:about="#OboeDaCaccia"/>
+    <rdf:Description rdf:about="#Ocarina"/>
+    <rdf:Description rdf:about="#OctaveMandolin"/>
+    <rdf:Description rdf:about="#Octavin"/>
+    <rdf:Description rdf:about="#OctocontrabassClarinet"/>
+    <rdf:Description rdf:about="#Ophicleide"/>
+    <rdf:Description rdf:about="#OrganPipe"/>
+    <rdf:Description rdf:about="#OvertoneGuitar"/>
+    <rdf:Description rdf:about="#PanPipes"/>
+    <rdf:Description rdf:about="#PastoralPipes"/>
+    <rdf:Description rdf:about="#Piano"/>
+    <rdf:Description rdf:about="#Piccolo"/>
+    <rdf:Description rdf:about="#PiccoloClarinet"/>
+    <rdf:Description rdf:about="#PiccoloHeckelphone"/>
+    <rdf:Description rdf:about="#PiccoloOboe"/>
+    <rdf:Description rdf:about="#PipeOrgan"/>
+    <rdf:Description rdf:about="#Pop"/>
+    <rdf:Description rdf:about="#Racket"/>
+    <rdf:Description rdf:about="#Rainstick"/>
+    <rdf:Description rdf:about="#Ratchet"/>
+    <rdf:Description rdf:about="#Rattle"/>
+    <rdf:Description rdf:about="#ReedContrabass"/>
+    <rdf:Description rdf:about="#ReedPipe"/>
+    <rdf:Description rdf:about="#Renaissance"/>
+    <rdf:Description rdf:about="#Rock"/>
+    <rdf:Description rdf:about="#RomanTuba"/>
+    <rdf:Description rdf:about="#Romantic"/>
+    <rdf:Description rdf:about="#Sampler"/>
+    <rdf:Description rdf:about="#Sarrusophone"/>
+    <rdf:Description rdf:about="#Saxhorn"/>
+    <rdf:Description rdf:about="#Saxonette"/>
+    <rdf:Description rdf:about="#Saxophone"/>
+    <rdf:Description rdf:about="#ScottishSmallpipes"/>
+    <rdf:Description rdf:about="#Serpent"/>
+    <rdf:Description rdf:about="#Siren"/>
+    <rdf:Description rdf:about="#SleighBells"/>
+    <rdf:Description rdf:about="#SlideGuitar"/>
+    <rdf:Description rdf:about="#SlideWhistle"/>
+    <rdf:Description rdf:about="#SlitDrum"/>
+    <rdf:Description rdf:about="#SnareDrum"/>
+    <rdf:Description rdf:about="#SopraninoClarinet"/>
+    <rdf:Description rdf:about="#SopraninoSaxophone"/>
+    <rdf:Description rdf:about="#SopranoClarinet"/>
+    <rdf:Description rdf:about="#SopranoMandolin"/>
+    <rdf:Description rdf:about="#SopranoSaxophone"/>
+    <rdf:Description rdf:about="#Sousaphone"/>
+    <rdf:Description rdf:about="#Spoons"/>
+    <rdf:Description rdf:about="#SteelDrum"/>
+    <rdf:Description rdf:about="#SteelGuitar"/>
+    <rdf:Description rdf:about="#SubcontrabassFlute"/>
+    <rdf:Description rdf:about="#SubcontrabassSaxophone"/>
+    <rdf:Description rdf:about="#Synclavier"/>
+    <rdf:Description rdf:about="#Synthesizer"/>
+    <rdf:Description rdf:about="#TalkingDrum"/>
+    <rdf:Description rdf:about="#Tambourine"/>
+    <rdf:Description rdf:about="#TenorHorn"/>
+    <rdf:Description rdf:about="#TenorSarrusophone"/>
+    <rdf:Description rdf:about="#TenorSaxophone"/>
+    <rdf:Description rdf:about="#TinWhistle"/>
+    <rdf:Description rdf:about="#Triangle"/>
+    <rdf:Description rdf:about="#Trombone"/>
+    <rdf:Description rdf:about="#Trumpet"/>
+    <rdf:Description rdf:about="#TrumpetBb"/>
+    <rdf:Description rdf:about="#Tuba"/>
+    <rdf:Description rdf:about="#TubularBells"/>
+    <rdf:Description rdf:about="#Turntables"/>
+    <rdf:Description rdf:about="#VerticalFlute"/>
+    <rdf:Description rdf:about="#VerticalViola"/>
+    <rdf:Description rdf:about="#Viola"/>
+    <rdf:Description rdf:about="#ViolaDaGamba"/>
+    <rdf:Description rdf:about="#ViolaOrganista"/>
+    <rdf:Description rdf:about="#Violin"/>
+    <rdf:Description rdf:about="#Violotta"/>
+    <rdf:Description rdf:about="#VladimirskyRozhok"/>
+    <rdf:Description rdf:about="#WagnerTuba"/>
+    <rdf:Description rdf:about="#Washboard"/>
+    <rdf:Description rdf:about="#WashtubBass"/>
+    <rdf:Description rdf:about="#Weird_Al_Yankovich"/>
+    <rdf:Description rdf:about="#WelshPipes"/>
+    <rdf:Description rdf:about="#Whip"/>
+    <rdf:Description rdf:about="#Whistle"/>
+    <rdf:Description rdf:about="#WillowFlute"/>
+    <rdf:Description rdf:about="#WindChimes"/>
+    <rdf:Description rdf:about="#Xylophone"/>
+    <rdf:Description rdf:about="#Zither"/>
+    <rdf:Description rdf:about="#conch"/>
+    <rdf:Description rdf:about="#soprillo"/>
+    <rdf:Description rdf:about="#Contrabass√°Anche"/>
+    <rdf:Description rdf:about="#H√©licon"/>
+    <rdf:Description rdf:about="#R&amp;B_and_Soul"/>
+  </owl:distinctMembers>
+</owl:AllDifferent>
+
+
+</rdf:RDF>
