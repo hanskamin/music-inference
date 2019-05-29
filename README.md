@@ -9,13 +9,13 @@ Using an OWL Ontology and neural network to classify songs and recreate them in 
 ### music21 MIDI and musicology libraries
 - documentation and project site: http://web.mit.edu/music21/doc/index.html
 - `pip3 install music21`
-### 
- ### Import libraries as needed in a python script
+
+## Import libraries as needed in a python script
  - `import owlready2 as owl`
  - `import music21 as music`
  
 
-### TODO:
+## TODO:
 - [ ] Scrape MIDI files.
 - [ ] Make JSON file for filling ontology.
 - [ ] Setup OWL API.
