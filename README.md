@@ -31,3 +31,6 @@ Using an OWL Ontology and neural network to classify songs and recreate them in 
 - Make JSON file for filling ontology.
 - Figure out inputs, layers, outputs, etc.
 - Train our network.
+
+## Resources and Examples:
+- [Generating Music with a Recurrent NN](https://towardsdatascience.com/how-to-generate-music-using-a-lstm-neural-network-in-keras-68786834d4c5)
