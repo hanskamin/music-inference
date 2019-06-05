@@ -17,10 +17,6 @@ def add_onto_labels(ontology):
     ontology.save("root-ontology.owl")
 
 
-def label_hasTheme(ontology):
-    pass
-
-
 def print_onto(ontology):
     print("\n~~~~~~~~Printing Ontology~~~~~~~~")
 
