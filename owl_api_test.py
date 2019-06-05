@@ -28,9 +28,14 @@ def print_onto(ontology):
     # object properties
     print("\nObject Properties:")
     for prop in ontology.object_properties():
-        propRange = prop.range
-        propDomain = prop.domain
-        print(prop.label[0], ": (", propDomain, "->", propRange, ")")
+        try:
+            propRange = prop.range[0].label[0]
+            propDomain = prop.domain[0].label[0]
+            print(prop.label[0], ": (", propDomain,
+                  "->", propRange, ")")
+        except IndexError:
+            print(
+                prop.label[0], ": either range or domain is not currently specified")
 
     # individuals
     print("\nIndividuals:")
@@ -40,10 +45,13 @@ def print_onto(ontology):
             print("\t", individual.label[0])
 
 
-# parse ontology for further use
-ontology = owl.get_ontology("./root-ontology.owl").load()
+def main():
+    ontology = owl.get_ontology("./root-ontology.owl").load()
+    print()
+    add_onto_labels(ontology)
+    print_onto(ontology)
+    ontology.save("./root-ontology.owl")
 
-print()
-add_onto_labels(ontology)
-print_onto(ontology)
-ontology.save("root-ontology.owl")
+
+if __name__ == "__main__":
+    main()
