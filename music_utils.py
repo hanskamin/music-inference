@@ -2,7 +2,7 @@
 This module contains utility functions that deal with MIDI files and their 
     music21 object representations
 """
-from music21 import converter, instrument, note, chord
+from music21 import converter, instrument, note, chord, stream
 import os
 import pickle
 
@@ -76,3 +76,38 @@ def get_notes():
         pickle.dump(notes, file)
 
     return notes
+
+
+def create_midi(prediction_output):
+    # NOTE: use instrument.instrumentFromMidiProgram(int) to provide a track with its instrument
+    #   - prediction_output should be replaced with an array of outputs and a matching array of
+    #        MIDI instrument programs, with which we can bind each track to its instrument
+    # convert network's prediction into music21-readable format, and then into a MIDI file
+    offset = 0
+    output_notes = []
+
+    # this will need a second nest for-loop to iterate through a series of network outputs,
+    #   one track for each instrument
+    # create note and chord objects from network output
+    for pattern in prediction_output:
+        if "." in pattern or pattern.isdigit():
+            notes_in_chord = pattern.split(".")
+            notes = []
+            for current in notes_in_chord:
+                new_note = note.Note(int(current))
+                # change this to accept input from command line
+                new_note.storedInstrument = instrument.Piano()
+                notes.append(new_note)
+            new_chord = chord.Chord(notes)
+            new_chord.offset = offset
+            output_notes.append(new_chord)
+        else:
+            new_note = note.Note(pattern)
+            new_note.offset = offset
+            new_note.storedInstrument = instrument.Piano()
+            output_notes.append(new_note)
+
+        offset += 0.5
+
+    midi_stream = stream.Stream(output_notes)
+    midi_stream.write("midi", fp="test_output.mid")
