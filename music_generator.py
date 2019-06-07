@@ -24,6 +24,7 @@ def generate_track():
         notes, pitch_names, n_vocab)
 
     model = load_network(normalized_input, n_vocab)
+    print("Predicting Note Sequences...")
     prediction_output = generate_notes(
         model, network_input, pitch_names, n_vocab)
 
