@@ -26,7 +26,6 @@ def get_midi_file_names():
 
 def get_some_files(stepSize):
     all_files = get_midi_file_names()
-    files_length = len(all_files)
     ret_files = []
 
     ct = 0
