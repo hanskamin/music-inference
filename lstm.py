@@ -36,7 +36,7 @@ def prepare_sequences(notes, n_vocab):
 
     # create a dictionary mapping notes to integers
     note_to_int = dict((note, number)
-                       for note, number in enumerate(pitch_names))
+                       for number, note in enumerate(pitch_names))
 
     network_input = []
     network_output = []
