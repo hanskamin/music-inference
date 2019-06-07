@@ -32,6 +32,7 @@ def get_some_files(stepSize):
     ct = 0
     for file in all_files:
         if ct % stepSize:
+            ct += 1
             continue
         else:
             ct += 1
