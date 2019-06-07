@@ -21,7 +21,7 @@ def get_midi_file_names():
     for file in os.listdir("./midi-files"):
         files.append(file)
 
-    return files
+    return sorted(files)
 
 
 def get_some_files(stepSize):
@@ -48,7 +48,9 @@ def get_notes():
     remaining = len(files)
     done = 0
     for file in files:
-        pretty_print_progress(done, remaining)
+        # pretty_print_progress(done, remaining)
+        print("Parsing:", file)
+
         midi = converter.parse(prefix + file)
 
         notes_to_parse = []
