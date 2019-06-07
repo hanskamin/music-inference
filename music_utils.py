@@ -24,13 +24,29 @@ def get_midi_file_names():
     return files
 
 
+def get_some_files(stepSize):
+    all_files = get_midi_file_names()
+    files_length = len(all_files)
+    ret_files = []
+
+    ct = 0
+    for file in all_files:
+        if ct % stepSize:
+            continue
+        else:
+            ct += 1
+            ret_files.append(file)
+
+    return ret_files
+
+
 def get_notes():
     notes = []
     prefix = "./midi-files/"
-    files = get_midi_file_names()
+    files = get_some_files(20)
     remaining = len(files)
     done = 0
-    for file in get_midi_file_names():
+    for file in files:
         pretty_print_progress(done, remaining)
         midi = converter.parse(prefix + file)
 
