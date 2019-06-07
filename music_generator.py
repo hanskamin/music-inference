@@ -3,12 +3,12 @@ This module generates note sequences from a pre-trained network
 """
 import pickle
 import numpy
-from music21 import instrument, note, stream, chord
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Dropout
 from keras.layers import LSTM
 from keras.layers import Activation
+import music_utils as utils
 
 
 def generate_track():
@@ -20,7 +20,14 @@ def generate_track():
     pitch_names = sorted(set(n for n in notes))
     n_vocab = len(pitch_names)
 
-    # UNFINISHED
+    network_input, normalized_input = prepare_sequences(
+        notes, pitch_names, n_vocab)
+
+    model = load_network(normalized_input, n_vocab)
+    prediction_output = generate_notes(
+        model, network_input, pitch_names, n_vocab)
+
+    utils.create_midi(prediction_output)
 
 
 def prepare_sequences(notes, pitch_names, n_vocab):
