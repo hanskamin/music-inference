@@ -11,7 +11,7 @@ from keras.layers import Activation
 import music_utils as utils
 
 
-def generate_track():
+def generate_song(genre_name, midi_programs):
     # generate a midi track
     with open("./song_data/notes", "rb") as file:
         notes = pickle.load(file)
@@ -28,7 +28,7 @@ def generate_track():
     prediction_output = generate_notes(
         model, network_input, pitch_names, n_vocab)
 
-    utils.create_midi(prediction_output)
+    utils.create_midi(prediction_output, genre_name, midi_programs)
 
 
 def prepare_sequences(notes, pitch_names, n_vocab):
