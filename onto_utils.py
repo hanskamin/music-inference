@@ -3,6 +3,7 @@ This module will query the OWL Ontology based on a user's inputted genre to
     select a set of instruments as midi program integers
 """
 import owlready2 as owl
+from music21 import instrument
 
 
 def load_ontology():
@@ -23,24 +24,24 @@ def get_genre_map(ontology):
 def get_instruments(genre, ontology):
     programs = []
     if genre.label[0] == "Blues":
-        programs.append(26)
-        programs.append(23)
-        programs.append(118)
+        programs.append(instrument.AcousticGuitar().midiProgram)
+        programs.append(instrument.Harmonica().midiProgram)
+        programs.append(instrument.TomTom().midiProgram)
     elif genre.label[0] == "Folk":
-        programs.append(106)
-        programs.append(33)
-        programs.append(4)
+        programs.append(instrument.Banjo().midiProgram)
+        programs.append(instrument.AcousticBass().midiProgram)
+        programs.append(instrument.Piano().midiProgram)
     elif genre.label[0] == "Rock":
-        programs.append(28)
-        programs.append(34)
-        programs.append(119)
+        programs.append(instrument.ElectricGuitar().midiProgram)
+        programs.append(instrument.ElectricBass().midiProgram)
+        programs.append(instrument.BassDrum().midiProgram)
     elif genre.label[0] == "Classical":
-        programs.append(41)
-        programs.append(69)
-        programs.append(74)
-        programs.append(43)
+        programs.append(instrument.Violin().midiProgram)
+        programs.append(instrument.Oboe().midiProgram)
+        programs.append(instrument.Flute().midiProgram)
+        programs.append(instrument.Viola().midiProgram)
     elif genre.label[0] == "Country":
-        programs.append(26)
-        programs.append(111)
-        programs.append(118)
+        programs.append(instrument.AcousticGuitar().midiProgram)
+        programs.append(instrument.Banjo().midiProgram)
+        programs.append(instrument.TomTom().midiProgram)
     return programs

@@ -52,7 +52,6 @@ def main():
 
     selection = get_genre_selection()
     print("Selected:", genres[selection].label[0])
-    print("Instruments in Genre:")
     midiPrograms = onto_utils.get_instruments(genres[selection], ontology)
 
     generator.generate_song(genres[selection], midiPrograms)

@@ -105,6 +105,7 @@ def create_midi(prediction_output, genre_name, midi_programs):
 
         midi_part = stream.Part(output_notes)
         # set the part's instrument
+        print(program)
         midi_part.insert(0, instrument.instrumentFromMidiProgram(program))
         # insert instrument part into score object
         midi_stream.insert(0, midi_part)

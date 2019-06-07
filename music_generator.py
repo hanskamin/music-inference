@@ -100,7 +100,7 @@ def generate_notes(model, network_input, pitch_names, n_vocab):
         result = int_to_note[index]
         prediction_output.append(result)
 
-        pattern.append(result)
+        pattern.append(index)
         # incorporate prediction into pattern for next feed-through
         pattern = pattern[1:len(pattern)]
 
