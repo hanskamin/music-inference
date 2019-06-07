@@ -460,9 +460,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Blues">
         <rdf:type rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#MusicalGenre"/>
+<<<<<<< HEAD
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Harmonica"/>
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Acoustic%20Grand%20Piano"/>
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Acoustic%20Guitar%20(steel)"/>
+=======
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Guitar"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Harmonica"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Piano"/>
+>>>>>>> master
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Electric%20Guitar%20(jazz)"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blues</rdfs:label>
     </owl:NamedIndividual>
@@ -548,15 +554,25 @@
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Cello"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Clarinet"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Flute"/>
+<<<<<<< HEAD
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Oboe"/>
+=======
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Guitar"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Oboe"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Organ"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Piano"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Pipe"/>
+>>>>>>> master
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Trombone"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Trumpet"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Viola"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Violin"/>
+<<<<<<< HEAD
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Acoustic%20Grand%20Piano"/>
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Acoustic%20Guitar%20(steel)"/>
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Church%20Organ"/>
+=======
+>>>>>>> master
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#French%20Horn"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Orchestral%20Harp"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Tremolo%20Strings"/>
@@ -608,12 +624,21 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Country">
         <rdf:type rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#MusicalGenre"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Banjo"/>
+<<<<<<< HEAD
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Fiddle"/>
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Gunshot"/>
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Harmonica"/>
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Violin"/>
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Acoustic%20Grand%20Piano"/>
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Acoustic%20Guitar%20(steel)"/>
+=======
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Country_Fiddle"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Guitar"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Gunshot"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Harmonica"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Piano"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Violin"/>
+>>>>>>> master
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Blown%20Bottle"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Honky-tonk%20Piano"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Country</rdfs:label>
@@ -701,12 +726,21 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#MusicalGenre"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Accordion"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Banjo"/>
+<<<<<<< HEAD
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Harmonica"/>
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Viola"/>
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Violin"/>
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Acoustic%20Bass"/>
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Acoustic%20Guitar%20(steel)"/>
+        <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Bright%20Acoustic%20Piano"/>
+=======
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Bass"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Guitar"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Harmonica"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Piano"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Viola"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Violin"/>
+>>>>>>> master
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Honky-tonk%20Piano"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Folk</rdfs:label>
     </owl:NamedIndividual>
@@ -977,8 +1011,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Rock">
         <rdf:type rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#MusicalGenre"/>
+<<<<<<< HEAD
+=======
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Bass"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Piano"/>
+>>>>>>> master
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Electric%20Bass%20(finger)"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Electric%20Guitar%20(clean)"/>
         <commonlyUsesInstrument rdf:resource="http://www.semanticweb.org/duxlow/ontologies/2019/3/untitled-ontology-5#Electric%20Guitar%20(muted)"/>

@@ -53,8 +53,11 @@ def print_onto(ontology):
     print("\nIndividuals:")
     for ontoClass in ontology.classes():
         print("... of class", ontoClass.label[0])
-        for individual in ontology.search(type=ontoClass):
-            print("\t", individual.label[0])
+        try:
+            for individual in ontology.search(type=ontoClass):
+                print("\t", individual.label[0])
+        except:
+            continue
 
 
 def create_instrument_individual(ontology, instrumentName, midiKey):
