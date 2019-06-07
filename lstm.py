@@ -86,7 +86,7 @@ def train(model, network_input, network_output):
     # train the neural network
 
     # format string with keyword format args
-    filepath = "weights-improvement-{epoch:02d}-{loss:.4f}-bigger.hdf5"
+    filepath = "./training/weights-improvement-{epoch:02d}-{loss:.4f}-bigger.hdf5"
     checkpoint = ModelCheckpoint(
         filepath,
         monitor="loss",
