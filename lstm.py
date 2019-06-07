@@ -3,7 +3,6 @@ This module contains functions that set up the LSTM RNN and package input data f
    serialization of the trained network
 """
 from keras.models import Sequential
-from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import Dropout
 from keras.layers import LSTM
@@ -14,13 +13,14 @@ import numpy
 import music_utils as utils
 
 
-def train_network():
+def init_training():
     # train a Neural Network to generate music
     notes = utils.get_notes()
 
     # get amount of pitch names
     n_vocab = len(set(notes))
 
+    # pairings of input sequences with expected note/chord to be produced
     network_input, network_output = prepare_sequences(notes, n_vocab)
 
     model = create_network(network_input, n_vocab)
@@ -98,3 +98,7 @@ def train(model, network_input, network_output):
 
     model.fit(network_input, network_output, epochs=200,
               batch_size=64, callbacks=callbacks_list)
+
+
+if __name__ == "__main__":
+    init_training()
