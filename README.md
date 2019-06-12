@@ -51,7 +51,6 @@ Using an OWL Ontology and neural network to classify songs and recreate them in 
 -  `import pandas as pd`
 -  `import requests`
 -  `from keras import Sequential`
--
 
 ## TODO:
 
@@ -59,6 +58,4 @@ Using an OWL Ontology and neural network to classify songs and recreate them in 
 -  Train our network.
 
 ## Resources and Examples:
-
--  [Generating Music with a Recurrent NN](https://towardsdatascience.com/how-to-generate-music-using-a-lstm-neural-network-in-keras-68786834d4c5)
 -  [MIDI instruments and their associated roles](https://soundprogramming.net/file-formats/general-midi-instrument-list/)
